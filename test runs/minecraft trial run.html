@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minecraft Menu Replica</title>
+</head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Press Start 2P', cursive;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+
+        }
+        
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+
+        
+
+
+        .menu {
+            text-align: center;
+
+        }
+
+        .mc-btn {
+            width: 428px;
+            padding: 15px 0;
+            margin: 15px auto;
+            background: url(/Screenshot\ 2026-02-23\ 193454.png) center/cover no-repeat;
+            border: 4px solid #000;
+            box-shadow:
+                inset -4px -4px 0 #6f6f6f,
+                inset 4px 4px 0 #ffffff;
+            color: #e0e0e0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .mc-btn:hover {
+            background: linear-gradient(#d4d4d4, #b0b0b0);
+        }
+
+        .mc-btn:active {
+            box-shadow:
+                inset 4px 4px 0 #6f6f6f,
+                inset -4px -4px 0 #ffffff;
+        }
+
+        .bottom-buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .small-btn {
+            width: 200px;
+            padding: 15px 0;
+            background: url(/Screenshot\ 2026-02-23\ 193454.png) center/cover no-repeat;
+            border: 4px solid #000;
+            box-shadow:
+                inset -4px -4px 0 #6f6f6f,
+                inset 4px 4px 0 #ffffff;
+            color: #e0e0e0;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .small-btn:hover {
+            background: linear-gradient(#d4d4d4, #b0b0b0);
+        }
+
+    </style>
+
+
+<body>
+    <header>
+        <img src="/test runs/x03l77cbchh71.png" style="width: 50%; height: 30%;">
+    </header>
+    <video id="bgvideo" autoplay muted loop>
+        <source src="/test runs/Recording 2026-02-23 184405.mp4" type="video/mp4">
+    </video>
+    <script>
+        const video = document.getElementById("bgvideo");
+        video.playbackRate = 0.5;
+    </script>
+
+    
+
+    <div class="menu">
+
+        <div class="mc-btn"><a href="single player window.html">Singleplayer</a></div>
+        <div class="mc-btn"><a href="multiplayer window.html">Multiplayer</a></div>
+        <div class="mc-btn"><a href="realms window.html">Minecraft Realms</a></div>
+
+        
+        <div class="bottom-buttons">
+            <div class="small-btn">Options...</div>
+            <div class="small-btn">Quit Game</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

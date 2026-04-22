@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        font-family: 'Press Start 2P', cursive;
+        align-items: center;
+        height: 100vh;
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+
+    }
+    section {
+        font-family: 'Press Start 2P', cursive;
+        background-blend-mode: lighten;
+        text-align: center;
+        color: white;
+    }
+    
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+        filter: blur(2px);
+
+    }
+    footer {
+        text-align: center;
+        position: absolute;
+        bottom: 2%;
+        width: 80%; 
+        left: 25%;     
+    }
+    .menu {
+        text-align: bottom;
+
+    }
+    .world{
+        font-family: 'Press Start 2P', cursive;
+        color: white;
+        text-align: justify;
+        margin-left: 20px;
+
+    }
+    .mc-btn{
+        text-align: center;
+        width: 320px;
+        padding: 13px 0;
+        margin: 1px auto;
+        background: url(test runs\ Screenshot\ 2026-02-23\ 193454.png) center/cover no-repeat;
+        border: 4px solid #000;
+        box-shadow:
+            inset -4px -4px 0 #6f6f6f,
+            inset 4px 4px 0 #ffffff;
+        color: #e0e0e0;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .mc-btn:hover {
+            background: linear-gradient(#d4d4d4, #b0b0b0);
+    }
+
+    .mc-btn:active {
+            box-shadow:
+                inset 4px 4px 0 #6f6f6f,
+                inset -4px -4px 0 #ffffff;
+    }
+
+    .bottom-buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+    }
+
+    .small-btn {
+            text-align: center;
+            width: 150px;
+            padding: 12px 0;
+            background: url(/test runs/Screenshot\ 2026-02-23\ 193454.png) center/cover no-repeat;
+            border: 4px solid #000;
+            box-shadow:
+                inset -4px -4px 0 #f2f0f0,
+                inset 4px 4px 0 #ffffff;
+            color: #e0e0e0;
+            font-size: 14px;
+            cursor: pointer;
+    }   
+
+    .small-btn:hover {
+            background: linear-gradient(#d4d4d4, #b0b0b0);
+    }
+    .parent-bottom-buttons{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+    }
+    .search{
+
+
+    }
+    .bg{
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background-color: #555;
+        opacity: 0.5;
+        z-index: -1;
+    }
+</style>
+<body>
+    <video id="bgvideo" autoplay muted loop>
+        <source src="/test runs/Recording 2026-02-23 184405.mp4" type="video/mp4">
+    </video>
+    <script>
+        const video = document.getElementById("bgvideo");
+        video.playbackRate = 0.6; 
+    </script>
+    <header>
+        <div class="Search">
+            <input type="text" placeholder="Search..." style="padding: 10px; width: 300px; font-size: 16px; background-color: #333; color: white; border: 2px solid #555; border-radius: 5px; transform-style: preserve-3d;">
+
+        </div>
+    </header>
+    <section style="font-family: 'Press Start 2P', cursive; background-blend-mode: lighten; align-content: center;">
+        <div class="world">
+        </div>
+        <div style="color:#040404;font-size: 10px;">
+            <div style="display: flex;justify-content: center;">
+            <div style="width: 100px; height: 80px; background-image: url(./image.png); background-size: cover; backdrop-filter: blur(10px); "></div>
+            <div style="margin-left: 5px;"">
+                <h3 style="color: #e0e0e0;">New World</h6>
+                Last Played: 2/23/2026<br>
+                Game Mode: Survival<br>
+                Version: 1.21.11<br>
+                Seed: 123456789
+            </div>
+
+                
+        </div>
+    </section>
+    <div class="bg"></div>
+    <footer>
+        <div class="parent-bottom-buttons">
+            <div class="bottom-buttons">
+                <div class="mc-btn">Play Selected World</div>
+                <div class="mc-btn">Create New World</div>
+            </div>
+
+            <div class="bottom-buttons">
+                <div class="small-btn">Edit</div>
+                <div class="small-btn">Delete</div>
+                <div class="small-btn">Re-Create</div>
+                <div class="small-btn">Back</div>
+            </div>
+            
+        </div>    
+
+    </div>
+    </footer>
+    
+</body>
+</html>

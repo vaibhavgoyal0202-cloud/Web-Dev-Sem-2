@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background-color: aquamarine;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Countdown Timer</h2>
+
+    Enter a number:
+    <input type="number" id="num">
+    <br><br>
+
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+
+    <div id="output"></div>
+
+    <script>
+        let timerInterval;
+
+        function startTimer() {
+            let n = document.getElementById("num").value;
+
+            if (n < 0) {
+                return;
+            }
+
+            timerInterval = setInterval(function() {
+                document.getElementById("output").innerHTML = n;
+
+                n--;
+
+                if (n < 0) {
+                        clearInterval(timerInterval);
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+    </script>
+
+</body>
+</html>

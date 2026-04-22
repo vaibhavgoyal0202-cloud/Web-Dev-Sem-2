@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic Content</title>
+</head>
+
+<body style="margin:0; display:flex; justify-content:center; align-items:center; height:100vh; background:linear-gradient(135deg,#9be7c4,#7fd3a8); font-family:Arial;">
+
+<div style="background:white; padding:30px; border-radius:10px; width:450px; text-align:center; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+
+<h2 id="heading">Sample Heading</h2>
+
+<input type="text" id="textInput" placeholder="Enter new heading" style="width:80%; padding:8px; margin-bottom:15px;">
+
+<br>
+
+<button onclick="changeHeading()" style="background:#4da3ff;color:white;border:none;padding:8px 12px;border-radius:5px;margin:5px;">Change Heading</button>
+
+<button onclick="changeBackground()" style="background:#4da3ff;color:white;border:none;padding:8px 12px;border-radius:5px;margin:5px;">Change Background</button>
+
+<button onclick="increaseFont()" 
+style="background:#4da3ff;color:white;border:none;padding:8px 12px;border-radius:5px;margin:5px;">
+Increase Font Size
+</button>
+
+<br>
+
+<button onclick="togglePara()" 
+style="background:#4da3ff;color:white;border:none;padding:8px 12px;border-radius:5px;margin:5px;">
+Show/Hide Paragraph
+</button>
+
+<button onclick="resetPage()" 
+style="background:#4da3ff;color:white;border:none;padding:8px 12px;border-radius:5px;margin:5px;">
+Reset
+</button>
+
+<p id="para" style="margin-top:20px;">
+This is a sample paragraph. JavaScript events can dynamically change content.
+</p>
+<h3>Vaibhav Goyal<br>
+        2025b15410097
+    </h3>
+
+</div>
+
+
+<script>
+
+let fontSize = 16;
+let colorIndex = 0;
+const colors = ["#FF6B6B", "#4ECDC4", "#FFE66D", "#95E1D3", "#A8E6CF"];
+
+function changeHeading(){
+let text=document.getElementById("textInput").value;
+document.getElementById("heading").innerHTML=text;
+}
+
+function changeBackground(){
+document.body.style.background = colors[colorIndex];
+colorIndex = (colorIndex + 1) % colors.length;
+}
+
+function increaseFont(){
+fontSize+=2;
+document.getElementById("para").style.fontSize=fontSize+"px";
+}
+
+function togglePara(){
+let para=document.getElementById("para");
+
+if(para.style.display==="none")
+para.style.display="block";
+else
+para.style.display="none";
+}
+
+function resetPage(){
+location.reload();
+}
+
+</script>
+    
+</body>
+</html>

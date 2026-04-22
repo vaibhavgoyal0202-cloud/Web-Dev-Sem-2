@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary Management</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eaeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #2e9e44;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #237a34;
+        }
+
+        .actions {
+            margin-top: 10px;
+        }
+
+        #output {
+            margin-top: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Employee Salary Management System</h2>
+
+    <input type="text" id="name" placeholder="Employee Name">
+    <input type="text" id="id" placeholder="Employee ID">
+    <input type="number" id="salary" placeholder="Salary">
+    <input type="text" id="dept" placeholder="Department">
+
+    <button onclick="addEmployee()">Add Employee</button>
+
+    <div class="actions">
+        <button onclick="displayAll()">Display All</button>
+        <button onclick="highSalary()">Salary > 50000</button>
+        <button onclick="totalSalary()">Total Salary</button>
+        <button onclick="avgSalary()">Average Salary</button>
+        <button onclick="countDept()">Count by Department</button>
+    </div>
+    <h3>Vaibhav Goyal<br>
+        2025b15410097
+    </h3>
+
+    <div id="output"></div>
+</div>
+
+<script src="script 5.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let names = ["Alice", "Bob", "Charlie", "Diana"];
+    let ages = [22, 25, 23, 24];
+    let cities = ["Los Angeles", "New York", "Chicago", "Houston"];
+    
+    console.log("Names:", names);
+    console.log("Ages:", ages);
+    console.log("Cities:", cities);
+    
+    console.log("\n--- Student Information ---");
+    for(let i = 0; i < names.length; i++){
+        console.log(`Student ${i+1}: ${names[i]}, Age: ${ages[i]}, City: ${cities[i]}`);
+    }
+    
+    console.log();
+    let students = [
+        {name: "Alice", age: 22, city: "Los Angeles"},
+        {name: "Bob", age: 25, city: "New York"},
+        {name: "Charlie", age: 23, city: "Chicago"},
+        {name: "Diana", age: 24, city: "Houston"}
+    ];
+    
+    students.forEach((student, index) => {
+        console.log(`Student ${index+1}: ${student.name}, Age: ${student.age}, City: ${student.city}`);
+    });
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // // let jasonString ='{"name":"John","age":30,"city":"New York"}';
+    // // let Obj=JSON.parse(jasonString);
+    // // console.log(Obj.name);
+    // // console.log(Obj.age);
+    // // console.log(Obj.city);
+    // let student={
+    //     name:"Alice",
+    //     age:22,
+    //     city:"Los Angeles"
+    // };
+    // for(let key in student){
+    //     console.log(key + ": " + student[key]);
+    // } 
+    function getData(){
+        return new Promise((resolve) => {
+            setTimeout(()=>{
+                resolve("Data received");
+            },2000);
+        });
+    }
+    async function showData(){
+        let result=await getData();
+        console.log(result);
+    }
+    showData();
+</script>
+<body>
+    
+</body>
+</html>
