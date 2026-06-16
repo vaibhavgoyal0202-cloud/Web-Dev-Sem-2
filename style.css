@@ -1,0 +1,35 @@
+body {
+    background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Card Styling */
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Image Styling */
+.card img {
+    height: 220px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
